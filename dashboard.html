@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Migration Control Center</title>
+    <style>
+        body { font-family: sans-serif; background: #f4f4f9; padding: 20px; }
+        .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { padding: 12px; border: 1px solid #ddd; text-align: left; }
+        th { background: #007bff; color: white; }
+        .passed { color: green; font-weight: bold; }
+        .failed { color: red; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>🚀 AI Migration Audit Dashboard</h1>
+        <p>Project: <strong>Legacy-to-Modern Bridge</strong></p>
+        <div id="results">Loading audit data...</div>
+    </div>
+
+    <script>
+        fetch('audit_report.json')
+            .then(response => response.json())
+            .then(data => {
+                let html = '<table><tr><th>File Name</th><th>Status</th><th>Last Audit</th></tr>';
+                data.forEach(item => {
+                    const statusClass = item.status === 'Passed' ? 'passed' : 'failed';
+                    html += `<tr>
+                        <td>${item.fileName}</td>
+                        <td class="${statusClass}">${item.status}</td>
+                        <td>${item.timestamp}</td>
+                    </tr>`;
+                });
+                html += '</table>';
+                document.getElementById('results').innerHTML = html;
+            });
+    </script>
+</body>
+</html>

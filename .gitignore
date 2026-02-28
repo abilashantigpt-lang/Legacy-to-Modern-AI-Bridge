@@ -1,0 +1,4 @@
+node_modules/
+.env
+audit_report.json
+modern_output/*.js
