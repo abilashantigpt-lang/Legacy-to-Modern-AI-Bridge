@@ -12,7 +12,7 @@ This project is an automated migration pipeline designed to refactor **Legacy Ja
 - **Governance Dashboard**: A real-time HTML reporting interface for Human-in-the-Loop (HITL) verification.
 
 ## 📊 Performance & Safety Results
-![Insert your Dashboard Screenshot Here]
+![![AI Migration Dashboard](./dashboard-preview.png)]
 > **Key Metric**: Successfully identified and flagged 100% of high-risk financial modules for manual review.
 
 ## 🚀 Technical Highlights
