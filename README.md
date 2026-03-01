@@ -26,3 +26,12 @@ This project is an automated migration pipeline designed to refactor **Legacy Ja
 3. `node translator.js` to migrate.
 4. `node extractor.js` to audit.
 5. Open `dashboard.html` to view results.
+
+## 🛡️ Project Governance & AI Disclosure
+This project was developed as a **Proof of Concept (PoC)** to demonstrate 
+how **Generative AI** can accelerate legacy-to-cloud migrations. 
+
+* **Human-in-the-Loop**: All AI-generated code was audited using the 
+  built-in **Safety Auditor** and manual review.
+* **License**: This project is licensed under the **MIT License**, 
+  protecting the original architecture and logic.
